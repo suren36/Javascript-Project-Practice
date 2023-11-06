@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: violet;
+}
+.btn {
+  padding: 1.5rem 3rem;
+  margin: 12px;
+  background: yellow;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+.btn:focus {
+  outline: none;
+}

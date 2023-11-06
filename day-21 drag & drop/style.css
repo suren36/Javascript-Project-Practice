@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: skyblue;
+}
+
+.boxes {
+  display: flex;
+}
+.empty {
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  background-color: #fff;
+}
+.fill {
+  background-image: url("https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YW5pbWFsfGVufDB8fDB8fHwy&auto=format&fit=crop&w=500&q=60");
+  height: 145px;
+  width: 145px;
+  cursor: pointer;
+  background-position: center center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hold {
+  border: solid 5px #ccc;
+}
+
+.hovered {
+  background-color: #333;
+  border-color: #fff;
+  border-style: dashed;
+}

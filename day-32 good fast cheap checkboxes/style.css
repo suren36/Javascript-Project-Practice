@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+body {
+  color: #222;
+  margin: 0;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 200px;
+}
+.toggle {
+  visibility: hidden;
+}
+.label {
+  background-color: #d0d0d0;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50px;
+  margin: 0 15px 0;
+  position: relative;
+}
+
+.toggle:checked + .label {
+  background-color: #8e44ad;
+}
+.toggle.toggle:checked + .label .ball {
+  animation: slideOn 0.3s linear forwards;
+}
+
+.ball {
+  background-color: white;
+  height: 34px;
+  width: 34px;
+  border-radius: 50px;
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  transition: ease-in 2s linear;
+  align-items: center;
+  justify-content: center;
+  animation: slideOff 0.3s linear forwards;
+}
+
+@keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  20% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(40px) scale(1);
+  }
+}
+
+@keyframes slideOff {
+  0% {
+    transform: translateX(40px) scale(1);
+  }
+  20% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}

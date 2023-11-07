@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+body {
+  color: #222;
+  margin: 0;
+  background-color: #3b3b98 !important;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+.containers {
+  background-color: #23235b !important;
+  box-shadow: 0px 2px 10px rgba(225, 255, 255, 0.2);
+  padding: 20px;
+  width: 350px;
+  max-width: 100%;
+  color: white;
+}
+.result-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100%-40px);
+}
+.btn {
+  border: none;
+  background-color: #3b3b98;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.result-container .btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+.setting {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  margin: 15px 0;
+}
+#clipboard i {
+  color: wheat;
+}

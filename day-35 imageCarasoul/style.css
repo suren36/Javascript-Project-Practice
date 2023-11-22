@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carasoul {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 530px;
+  width: 500px;
+  overflow: hidden;
+}
+
+img {
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+}
+.image-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnn {
+  background-color: rebeccapurple;
+  border: none;
+  padding: 0.2rem;
+  cursor: pointer;
+  color: #fff;
+  width: 49.5%;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:focus {
+    outline: none;
+  }
+}

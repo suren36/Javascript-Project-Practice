@@ -38,7 +38,7 @@ body {
   overflow: hidden;
   width: 300px;
 }
-.rating {
+.ratings {
   flex: 1;
   cursor: pointer;
   padding: 20px;
@@ -48,7 +48,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }
-.rating.active {
+.ratings.active {
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -57,7 +57,7 @@ body {
   margin: 20px 0;
 }
 
-.rating img {
+.ratings img {
   height: 40px;
   width: 40px;
 }
@@ -66,8 +66,8 @@ body {
   display: inline-block;
   margin: 10px 0 0;
 }
-.rating:hover small,
-.rating.active small {
+.ratings:hover small,
+.ratings.active small {
   color: #111;
 }
 .btnn {

@@ -1,42 +1,28 @@
-const rating = document.querySelectorAll(".rating");
+const ratings = document.querySelectorAll(".ratings");
 const sendBtn = document.getElementById("send");
 const panel = document.getElementById("panel");
+const ratingContainer = document.querySelector(".rating-container");
+let selectedRating = "Satisfied";
 
-getData();
-
-filter.addEventListener("input", (e) => {
-  filterData(e.target.value);
+ratingContainer.addEventListener("click", (e) => {
+  if (e.target.parentNode.classList.contains("ratings")) {
+    removeActive();
+    e.target.parentNode.classList.add("active");
+    selectedRating = e.target.nextElementSibling.innerHTML;
+  }
 });
-async function getData() {
-  const res = await fetch("https://randomuser.me/api?results=50");
 
-  const { results } = await res.json();
-
-  result.innerHTML = ""; //clear Results
-
-  results.forEach((user) => {
-    const li = document.createElement("li");
-
-    listitems.push(li);
-
-    li.innerHTML = `
-    <img src="${user.picture.large}" alt="${user.name.first}">
-    <div class="user-info">
-      <h4>${user.name.first} ${user.name.last}</h4>
-      <p>${user.location.city}, ${user.location.country}</p>
-    </div>
+sendBtn.addEventListener("click", (e) => {
+  panel.innerHTML = `
+  <i class="fas fa-heart"</i>
+  <strong>Thank You</strong>
+  <br>
+  <strong>Feedback : ${selectedRating}</strong>
+  <p>We'll use your feedback to improve our customer support</p>
   `;
-
-    result.appendChild(li);
-  });
-}
-
-function filterData(searchTerm) {
-  listitems.forEach((item) => {
-    if (item.innerText.toLowerCase().includes(searchTerm.toLowerCase())) {
-      item.classList.remove("hide");
-    } else {
-      item.classList.add("hide");
-    }
-  });
+});
+function removeActive() {
+  for (let i = 0; i < ratings.length; i++) {
+    ratings[i].classList.remove("active");
+  }
 }
